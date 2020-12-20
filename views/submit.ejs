@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    
+    <a class="navbar-brand js-scroll-trigger" target='_blank'>E-Cell</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger p-3" href="/">Submit Message</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger p-3" href="/viewMessages">Show Messages</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="login" class="container-fluid form-group">
+  <div class="row mt-6">
+    <div class="col-md-6 m-auto">
+      <div>       
+        <form action="/submitForm" method="POST">
+          <div class="form-group">
+            <label for="email">Username</label>
+            <input
+              type="uName"
+              id="uName"
+              name="uName"
+              class="form-control cust"
+              placeholder="Enter Username"
+              value="<%= typeof uName != 'undefined' ? uName : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control cust"
+              placeholder="Enter Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea data-max-words="100" class="form-control" rows="3" id="message" name="message" placeholder="Enter Message"></textarea>
+          </div><br />
+          <button type="submit" class="btn btn-primary btn-block">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

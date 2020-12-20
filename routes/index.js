@@ -4,7 +4,7 @@ const router = express.Router();
 const User  = require('../models/User')
 
 router.get('/', (req,  res) => {
-    res.render('landing')
+    res.render('submit')
 })
 
 router.post('/submitForm', async (req, res) => {
@@ -13,18 +13,25 @@ router.post('/submitForm', async (req, res) => {
     const newUser = new User({
         uName, email, message
     })
-
-    console.log(newUser)
-
     await newUser.save()
 
-    res.status(200).send(newUser)
+    res.status(200).render('success', {"user":newUser})
 })
 
-router.get('/allUsers', async (req, res) => {
-    const allUsers = await User.find()
+router.get('/viewMessages', (req, res) => {
 
-    res.status(200).send(allUsers)
+    res.status(200).render('view-msgs')
+})
+
+router.get('/viewUser', async (req, res) => {
+    const foundUser = await User.findOne({uName: req.query.uName})
+
+    if(foundUser){
+        res.status(200).render('msg', {'user': foundUser})
+    }else{
+        res.status(404).send({"Error": "User not found!"})
+    }
+
 })
 
 module.exports = router

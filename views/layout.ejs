@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ECell Recs</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/e57fcbd46d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style>
+    h5 .Cont{
+      text-emphasis: none;
+      font-weight: 400;
+    }
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+    overflow-x: hidden;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+
+  .reg-btn{
+    background-color: transparent;
+    border:1px solid white;
+    font-size: 1.3rem;
+    visibility: hidden;
+    margin:2rem auto;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+ .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #2c2c2c; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #2c2c2c;
+    background-color: #fff !important;
+    color: #2c2c2c;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #2c2c2c !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  
+  .navbar {
+    margin-bottom: 0;
+    background-color: #2c2c2c;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #2c2c2c !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  .fa-bars{
+    color: #f6f6f6;
+  }
+  input[type='file']{
+    border: 0;
+  }
+  textarea{
+    border-top: 1px !important;
+  }
+  .tech{
+    position: fixed;
+    right: 0;
+  }
+  .form-control {
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none !important;
+  }
+  .form-control:focus{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+  footer{
+    background-color: #333;
+  overflow: hidden;
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100%;
+  }
+  .dash{
+    color: #087E8B;
+    font-weight: bolder;
+    font-size: 2.8em;
+  }
+  .user{
+    color: #2c2c2c;
+    font-size: 3.4em;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .hide-lg{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .dash{
+      font-size: 2.2em,
+    }
+    .sub-head{
+      font-size: 1.4em;
+    }
+    .sub-head-2{
+      font-size: 1.2em;
+    }
+    .reg-btn{
+      visibility:visible;
+    }
+    .hero-text{
+      font-size: 2em;
+      margin: 7rem auto 6rem;
+    }
+    .dash-buttons{
+      flex-direction: column;
+    }
+    .hero-post{
+      font-size: 1em;
+      margin: auto;
+    }
+    .logo {
+      display: inline-block;
+      font-size: 150px;
+    }
+    .hide-sm{
+      display: none;
+    }
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+
+    .posters-single{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    }
+    .posters-single img{
+      width: 160% !important;
+    }
+    
+    .posters-master{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .posters{
+    margin-left: 10%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .posters-single img,.posters img{
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    width: 90% ;
+    margin-top: 4%;
+    height: auto;
+  }
+
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <div><%- body%></div>
+</body>
+</html>
